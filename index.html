@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Multi-Step</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- wrapper app -->
+
+    <section id="wrapper">
+      <section id="markers">
+        <div id="marker1" class="n-step current"><span>1</span></div>
+        <div id="marker2" class="n-step next"><span>2</span></div>
+        <div id="marker3" class="n-step next"><span>3</span></div>
+      </section>
+
+      <form action="" name="form-app">
+        <section id="form-step-wrapper">
+          <div id="form-step1" class="form-step">
+            <input type="text" id="name" placeholder="Nome *" />
+            <input type="text" id="lastname" placeholder="Cognome *" />
+          </div>
+          <div id="form-step2" class="form-step">
+            <input type="text" id="email" placeholder="Email *" />
+            <input type="text" id="tel" placeholder="Telefono" />
+          </div>
+          <div id="form-step3" class="form-step">
+            <input type="text" id="city" placeholder="Città" />
+            <input type="text" id="cap" placeholder="Cap" />
+          </div>
+        </section>
+      </form>
+    </section>
+
+    <p id="error-message"></p>
+
+    <section id="form-btn-wrapper">
+      <button id="btn-prev" class="prev">Prev</button>
+      <button id="btn-next" class="next">Next</button>
+    </section>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
