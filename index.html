@@ -16,8 +16,8 @@
 
     <section id="wrapper">
       <section id="markers">
-        <div id="marker1" class="n-step current"><span>1</span></div>
-        <div id="marker2" class="n-step next"><span>2</span></div>
+        <div id="marker1" class="n-step valid"><span>1</span></div>
+        <div id="marker2" class="n-step current"><span>2</span></div>
         <div id="marker3" class="n-step next"><span>3</span></div>
       </section>
 
@@ -36,15 +36,15 @@
             <input type="text" id="cap" placeholder="Cap" />
           </div>
         </section>
+        <p id="error-message"></p>
+
+        <section id="form-btn-wrapper">
+          <button id="btn-prev" class="prev">Prev</button>
+          <button id="btn-next" class="next">Next</button>
+        </section>
       </form>
     </section>
 
-    <p id="error-message"></p>
-
-    <section id="form-btn-wrapper">
-      <button id="btn-prev" class="prev">Prev</button>
-      <button id="btn-next" class="next">Next</button>
-    </section>
     <script src="./js/script.js"></script>
   </body>
 </html>
