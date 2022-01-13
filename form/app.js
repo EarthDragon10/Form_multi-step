@@ -1,5 +1,5 @@
 // Entry Point
-// import checkForm from "./validator.js";
+import checkForm from "./validator.js";
 import { setStepForm, setMarker } from "./markers.js";
 
 const conf = {
@@ -12,7 +12,7 @@ const conf = {
   STEP_NUM: 3,
   GAP: 20,
   currentStep: 1,
-  stepValid: true,
+  stepValid: false,
 };
 
 const stepValidatorEvent = (e) => {
@@ -20,7 +20,7 @@ const stepValidatorEvent = (e) => {
   e.preventDefault();
 
   // check fields validity
-  // checkForm(conf);
+  checkForm(conf);
 };
 
 const stepEvent = (e) => {
@@ -32,7 +32,7 @@ const stepEvent = (e) => {
   if (e.target.id === "btn-next") {
     if (conf.currentStep === conf.STEP_NUM || !conf.stepValid) return;
     conf.currentStep++;
-    conf.stepValid = true;
+    conf.stepValid = false;
   } else {
     conf.currentStep--;
   }
