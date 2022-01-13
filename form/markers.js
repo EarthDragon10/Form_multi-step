@@ -9,13 +9,6 @@ const setMarker = (conf) => {
     item.className = "n-step " + (i < conf.currentStep - 1 ? "valid" : "next");
     item.className =
       i === conf.currentStep - 1 ? "n-step current" : item.className;
-    // if (i < conf.currentStep - 1) {
-    //   item.className = "n-step valid";
-    // } else if (i === conf.currentStep - 1) {
-    //   item.className = "n-step current";
-    // } else {
-    //   item.className = "n-step next";
-    // }
   });
 
   conf.btnPrev.style.display = conf.currentStep > 1 ? "inline" : "none";
