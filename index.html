@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Multi-Step</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./img/logo.jpg" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -16,8 +17,8 @@
 
     <section id="wrapper">
       <section id="markers">
-        <div id="marker1" class="n-step valid"><span>1</span></div>
-        <div id="marker2" class="n-step current"><span>2</span></div>
+        <div id="marker1" class="n-step current"><span>1</span></div>
+        <div id="marker2" class="n-step next"><span>2</span></div>
         <div id="marker3" class="n-step next"><span>3</span></div>
       </section>
 
@@ -45,6 +46,10 @@
       </form>
     </section>
 
-    <script src="./js/script.js"></script>
+    <script type="module">
+      import App from "./form/app.js";
+      // App();
+      document.addEventListener("DOMContentLoaded", (e) => App());
+    </script>
   </body>
 </html>
