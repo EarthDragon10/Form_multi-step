@@ -34,11 +34,15 @@ function checkStep1(conf) {
 function checkStep2(conf) {
   resetErrorMessage(conf);
 
-  if (conf.formApp.elements["email"].value.length >= 2) {
+  const email = conf.formApp.elements["email"].value;
+
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
     return (conf.stepValid = true);
   }
 
-  showErrorMessage(conf, "Compilare i campi obbligatori *");
+  return (conf.stepValid = true);
+
+  showErrorMessage(conf, "Email non valida! *");
 }
 
 function checkStep3(conf) {
